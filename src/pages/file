@@ -1,0 +1,61 @@
+<div className="d-flex justify-content-center align-items-center vh-100">
+
+<div className="card shadow" style={{ width: "400px" })>
+
+<div className="card-body">
+
+<h3 className="text-center mb-4">Login</h3>
+
+<form
+
+<div className="nb-3">
+
+<label html For "email" className="form-label">Email</label>
+
+<input type="email" className="form-control" id="email" placeholder="Enter your email" />
+
+</div>
+
+<div className="nb-3">
+
+A
+
+<label htmlFor="password" className="form-label">Password</label>
+
+<input type="password" className="form-control" id="password" placeholder="Enter your passwc
+
+</div>
+
+<button type="submit" className="btn btn-primary w-100">Login</button>
+
+</form>
+
+<p className="text-center st-3">
+
+Don't have an account? <a href="/signup">Sign up</a>
+
+Riddhi Suteri
+
+Home.jsx
+
+26
+
+</p>
+
+Login.jsx
+
+M
+
+27
+
+</div>
+
+Profile.jsx
+
+20
+
+</div>
+
+29
+
+</div>
