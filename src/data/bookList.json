@@ -1,63 +1,233 @@
 [
     {
-      "id": "1",
-      "name": "The Great Gatsby",
-      "author": "F. Scott Fitzgerald",
-      "rating": 4.5
+      "id": 1,
+      "bookname": "The Silent Forest",
+      "authorName": "John Doe",
+      "genre": "Mystery",
+      "isFeatured": true,
+      "published": "2023-05-15",
+      "isTrending": false,
+      "reviews": [
+        {
+          "id": 101,
+          "rating": 4.5,
+          "content": "A thrilling mystery with unexpected twists.",
+          "reviewer": "Jane Smith"
+        },
+        {
+          "id": 102,
+          "rating": 4.0,
+          "content": "Engaging story but the ending felt rushed.",
+          "reviewer": "Tom Johnson"
+        }
+      ]
     },
     {
-      "id": "2",
-      "name": "1984",
-      "author": "George Orwell",
-      "rating": 4.8
+      "id": 2,
+      "bookname": "Beyond the Horizon",
+      "authorName": "Emily Carter",
+      "genre": "Romance",
+      "isFeatured": false,
+      "published": "2021-11-10",
+      "isTrending": true,
+      "reviews": [
+        {
+          "id": 201,
+          "rating": 5.0,
+          "content": "Heartwarming and beautifully written.",
+          "reviewer": "Alice Brown"
+        },
+        {
+          "id": 202,
+          "rating": 3.8,
+          "content": "Good story but some parts felt repetitive.",
+          "reviewer": "Mike Davis"
+        }
+      ]
     },
     {
-      "id": "3",
-      "name": "To Kill a Mockingbird",
-      "author": "Harper Lee",
-      "rating": 4.9
+      "id": 3,
+      "bookname": "Galactic Adventures",
+      "authorName": "Robert Knight",
+      "genre": "Science Fiction",
+      "isFeatured": true,
+      "published": "2022-03-20",
+      "isTrending": true,
+      "reviews": [
+        {
+          "id": 301,
+          "rating": 4.8,
+          "content": "An imaginative journey through space.",
+          "reviewer": "Sarah Wilson"
+        },
+        {
+          "id": 302,
+          "rating": 4.2,
+          "content": "Amazing world-building but a bit slow in the middle.",
+          "reviewer": "David Clark"
+        }
+      ]
     },
     {
-      "id": "4",
-      "name": "Moby Dick",
-      "author": "Herman Melville",
-      "rating": 4.1
+      "id": 4,
+      "bookname": "Echoes of Eternity",
+      "authorName": "Martha Gray",
+      "genre": "Fantasy",
+      "isFeatured": false,
+      "published": "2020-06-01",
+      "isTrending": false,
+      "reviews": [
+        {
+          "id": 401,
+          "rating": 4.7,
+          "content": "Magical and captivating from start to finish.",
+          "reviewer": "Emma Scott"
+        },
+        {
+          "id": 402,
+          "rating": 4.3,
+          "content": "Great characters and world-building.",
+          "reviewer": "Liam Carter"
+        }
+      ]
     },
     {
-      "id": "5",
-      "name": "Pride and Prejudice",
-      "author": "Jane Austen",
-      "rating": 4.7
+      "id": 5,
+      "bookname": "The Last Kingdom",
+      "authorName": "Henry Wilson",
+      "genre": "Historical Fiction",
+      "isFeatured": true,
+      "published": "2019-10-18",
+      "isTrending": false,
+      "reviews": [
+        {
+          "id": 501,
+          "rating": 4.6,
+          "content": "A masterpiece of historical storytelling.",
+          "reviewer": "Sophia Moore"
+        },
+        {
+          "id": 502,
+          "rating": 4.4,
+          "content": "Well-researched and beautifully written.",
+          "reviewer": "Ethan James"
+        }
+      ]
     },
     {
-      "id": "6",
-      "name": "The Catcher in the Rye",
-      "author": "J.D. Salinger",
-      "rating": 4.3
+      "id": 6,
+      "bookname": "Rise of the Phoenix",
+      "authorName": "Laura Bennett",
+      "genre": "Adventure",
+      "isFeatured": false,
+      "published": "2023-01-12",
+      "isTrending": true,
+      "reviews": [
+        {
+          "id": 601,
+          "rating": 4.9,
+          "content": "An exhilarating adventure full of surprises.",
+          "reviewer": "Olivia Brown"
+        },
+        {
+          "id": 602,
+          "rating": 4.7,
+          "content": "Kept me hooked until the last page!",
+          "reviewer": "Noah Anderson"
+        }
+      ]
     },
     {
-      "id": "7",
-      "name": "The Hobbit",
-      "author": "J.R.R. Tolkien",
-      "rating": 4.9
+      "id": 7,
+      "bookname": "Shadows of the Past",
+      "authorName": "Daniel Evans",
+      "genre": "Thriller",
+      "isFeatured": true,
+      "published": "2022-09-15",
+      "isTrending": false,
+      "reviews": [
+        {
+          "id": 701,
+          "rating": 4.3,
+          "content": "Dark and gripping with plenty of suspense.",
+          "reviewer": "Mia Taylor"
+        },
+        {
+          "id": 702,
+          "rating": 4.1,
+          "content": "Well-paced and thrilling.",
+          "reviewer": "Lucas Martinez"
+        }
+      ]
     },
     {
-      "id": "8",
-      "name": "Brave New World",
-      "author": "Aldous Huxley",
-      "rating": 4.6
+      "id": 8,
+      "bookname": "Infinite Horizons",
+      "authorName": "Anna Lopez",
+      "genre": "Science Fiction",
+      "isFeatured": false,
+      "published": "2021-07-22",
+      "isTrending": true,
+      "reviews": [
+        {
+          "id": 801,
+          "rating": 4.8,
+          "content": "A visionary take on the future of humanity.",
+          "reviewer": "Ella Hernandez"
+        },
+        {
+          "id": 802,
+          "rating": 4.6,
+          "content": "Thought-provoking and imaginative.",
+          "reviewer": "James Walker"
+        }
+      ]
     },
     {
-      "id": "9",
-      "name": "War and Peace",
-      "author": "Leo Tolstoy",
-      "rating": 4.4
+      "id": 9,
+      "bookname": "Whispers in the Dark",
+      "authorName": "Grace Hall",
+      "genre": "Horror",
+      "isFeatured": false,
+      "published": "2020-11-05",
+      "isTrending": false,
+      "reviews": [
+        {
+          "id": 901,
+          "rating": 4.2,
+          "content": "Chilling and atmospheric.",
+          "reviewer": "Emily Robinson"
+        },
+        {
+          "id": 902,
+          "rating": 4.0,
+          "content": "A haunting tale that stays with you.",
+          "reviewer": "Jack Wilson"
+        }
+      ]
     },
     {
-      "id": "10",
-      "name": "Crime and Punishment",
-      "author": "Fyodor Dostoevsky",
-      "rating": 4.8
+      "id": 10,
+      "bookname": "The Art of Deception",
+      "authorName": "Peter Turner",
+      "genre": "Crime",
+      "isFeatured": true,
+      "published": "2019-03-30",
+      "isTrending": false,
+      "reviews": [
+        {
+          "id": 1001,
+          "rating": 4.5,
+          "content": "A clever and intricate crime novel.",
+          "reviewer": "Ava Martinez"
+        },
+        {
+          "id": 1002,
+          "rating": 4.3,
+          "content": "Kept me guessing until the very end!",
+          "reviewer": "Oliver Scott"
+        }
+      ]
     }
-]
-
+  ]
+    

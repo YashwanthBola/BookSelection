@@ -6,10 +6,10 @@ export default function BookCard({ books }) {
       <div class="card text-center">
         <div class="card-header">{books.author}</div>
         <div class="card-body">
-          <h5 class="card-title">{books.name}</h5>
+          <h5 class="card-title">{books.bookname}</h5>
           <Link to={`/bookDetails/${books.id}`}>Book Details</Link>
         </div>
-        <div class="card-footer text-body-secondary">{books.rating}</div>
+        <div class="card-footer text-body-secondary">{books.published}</div>
       </div>
     </div>
   );

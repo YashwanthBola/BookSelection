@@ -10,9 +10,14 @@ export default function BookDetails() {
       <TopNavbar />
       <hr />
       Book Details for BookId: {booksId}
-      <h3>{currentBook[0].name}</h3>
-      <h5>{currentBook[0].author}</h5>
+      <h3>{currentBook[0].bookname}</h3>
+      <h5>{currentBook[0].authorName}</h5>
       <h5>{currentBook[0].rating}</h5>
+      <h5>{currentBook[0].published}</h5>
+      <h5>{currentBook[0].isFeatured}</h5>
+      <h5>{currentBook[0].isTrending}</h5>
+      <h5>{currentBook[0].genre}</h5>
+      <h5>{currentBook[0].reviews.rating}</h5>
     </div>
   );
 }
