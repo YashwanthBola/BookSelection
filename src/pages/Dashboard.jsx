@@ -1,34 +1,45 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback, useMemo } from "react";
 import TopNavbar from "../components/TopNavbar";
-import axios from "axios";
+import Footer from "../components/Footer";
 
-export default function Dashboard() {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [totalPage, setTotalPage] = useState(3);
-  const [apiResponse, setApiResponse] = useState([]);
+const Dashboard = () => {
+  let [currentPage, setCurrentPage] = useState(1);
+  let [totalPage, setTotalPage] = useState(3);
+  let [apiResponse, setApiResponse] = useState([]);
 
-  useEffect(() => {
-    fetchData();
+  const fetchData = useCallback(async (page) => {
+    try {
+      const response = await fetch(
+        `http://localhost:8000/api/books?page=${page}&limit=10`
+      );
+      const data = await response.json();
+      setApiResponse(data.data);
+      setTotalPage(data.totalPages || 3);
+    } catch (error) {
+      console.error("Failed to fetch data:", error);
+    }
   }, []);
 
   useEffect(() => {
     fetchData(currentPage);
-  }, [currentPage]);
+  }, [currentPage, fetchData]);
 
-  const fetchData = async (currentPage) => {
-    let response = await fetch(
-      `http://localhost:8000/api/books?page=${currentPage}&limit=10`
-    );
-    let data = await response.json();
-    console.log(data);
-    setApiResponse(data.data);
-  };
+  const handlePageChange = useCallback(
+    (pageNumber) => {
+      if (pageNumber >= 1 && pageNumber <= totalPage) {
+        setCurrentPage(pageNumber);
+      }
+    },
+    [totalPage]
+  );
 
-  const handlePage = (pageNumber) => {
-    if (pageNumber > 0 && pageNumber < totalPage) {
-      setCurrentPage(pageNumber);
-    }
-  };
+  const formattedApiResponse = useMemo(() => {
+    return apiResponse.map((user) => ({
+      ...user,
+      fullName: `${user.title} (${user.author})`,
+    }));
+  }, [apiResponse]);
+
   return (
     <div>
       <TopNavbar />
@@ -36,6 +47,7 @@ export default function Dashboard() {
         <h1 className="mb-4">Dashboard</h1>
 
         <div className="row">
+          {/* Users Section */}
           <div className="col-md-6">
             <div className="card mb-4">
               <div className="card-header">
@@ -51,21 +63,32 @@ export default function Dashboard() {
                     </tr>
                   </thead>
                   <tbody>
-                    {apiResponse.map((user) => (
+                    {formattedApiResponse.map((user) => (
                       <tr key={user.id}>
                         <td>{user.id}</td>
-                        <td>{user.title}</td>
-                        <td>{user.email}</td>
+                        <td>{user.fullName}</td>
+                        <td>{user.author}</td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
               </div>
-              <div className="card-footer">
-                <button onClick={() => handlePage(currentPage - 1)}>
+              <div className="card-footer d-flex justify-content-between">
+                <button
+                  onClick={() => handlePageChange(currentPage - 1)}
+                  disabled={currentPage === 1}
+                  className="btn btn-primary"
+                >
                   Previous
                 </button>
-                <button onClick={() => handlePage(currentPage + 1)}>
+                <span>
+                  Page {currentPage} of {totalPage}
+                </span>
+                <button
+                  onClick={() => handlePageChange(currentPage + 1)}
+                  disabled={currentPage === totalPage}
+                  className="btn btn-primary"
+                >
                   Next
                 </button>
               </div>
@@ -73,6 +96,9 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
-}
+};
+
+export default Dashboard;
